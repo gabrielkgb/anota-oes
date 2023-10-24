@@ -1,0 +1,22 @@
+<app-header></app-header>
+
+<ion-content [fullscreen]="true">
+
+  <form #form="ngForm" (ngSubmit)="logar(form)">
+    <ion-list>
+      <ion-item>
+        <ion-input label="Usuario" label-placement="floating" fill="solid" placeholder="Usuario" type="text" name="email" ngModel required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input class="input" label="Senha" label-placement="floating" fill="solid" placeholder="Senha" type="password" ngModel name="password" required></ion-input>
+      </ion-item>
+      
+    </ion-list>
+    
+    <p style="margin-left:15px; font-size: 12px;"><a routerLink="/cadastro" >Cadastre-se</a></p>
+
+    <ion-button routerLink="/footer" expand="full" shape="round" color="dark" class="btn btn-primary mt-3" type="submit"> ENTRAR </ion-button>
+
+    </form>
+</ion-content>
